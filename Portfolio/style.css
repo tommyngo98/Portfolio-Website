@@ -115,9 +115,73 @@ input, select {
     text-decoration: none;
 }
 
+main {
+    padding-top: 100px;
+}
+
+.mainBanner {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url(img/hamburg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+}
+
+.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mainBanner h2 {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px #111;
+}
+
+.mainBanner h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-style: italic;
+    line-height: 40px;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    font-weight: 100;
+    text-shadow: 2px 2px 8px #111;
+}
+
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .mainBanner {
+        height: 500px;
+    }
+    
+    .mainBanner h2 {
+        font-size: 70px;
+        line-height: 80px;
+    }
+    
+    .mainBanner h1 {
+        font-size: 30px;
+        display: block;
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
 /* HEADER */
 
 header {
+    position: fixed;
     background-color: #f1f1f1;
     width: 100%;
     height: 100px;
@@ -194,43 +258,7 @@ header .issues {
     }
 }
 
-/* MAIN */
-
-.mainBanner {
-    width: 100%;
-    height: calc(100vh - 100px);
-    background-image: url(img/hamburg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: table;
-}
-
-.vertical-center {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.mainBanner h2 {
-    font-family: 'Cantarell', sans-serif;
-    font-size: 50px;
-    line-height: 60px;
-    color: #fff;
-    text-align: center;
-    font-weight: 800;
-    text-shadow: 2px 2px 8px #111;
-}
-
-.mainBanner h1 {
-    font-family: 'Permanent Marker', cursive;
-    font-style: italic;
-    line-height: 40px;
-    font-size: 25px;
-    color: #fff;
-    text-align: center;
-    font-weight: 100;
-    text-shadow: 2px 2px 8px #111;
-}
+/* INDEX */
 
 .mainLinks div {
     margin: 16px 16px 0;
@@ -249,8 +277,37 @@ header .issues {
     text-transform: uppercase;
 }
 
+@media only screen and (min-width: 1000px) {
+    
+    .mainLinks  {
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+    
+    .mainLinks div {
+        margin: 20px 10px 0;
+        height: 230px;
+        background-color: #f2f2f2;
+        float: left;
+    }
+        
+    .mainLinks div h3 {
+        line-height: 230px;
+        font-size: 38px;
+    }
+    
+    .rectanglePort {
+        width: calc(99% - 20px) !important;
+    }
+    
+    .rectangle {
+        width: calc(33% - 20px) !important;
+    }
+}
+
+/* ABOUT ME */
+
 .mainAbout {
-    width: 100%;
     background-color: #f1f1f1;
 }
 
@@ -285,55 +342,7 @@ header .issues {
     padding-bottom: 20px;
 }
 
-
-
 @media only screen and (min-width: 1000px) {
-    .wrapper {
-        width: 1800px;
-        margin: 0 auto;
-    }
-    
-    .mainBanner {
-        height: 500px;
-    }
-    
-    .mainBanner h2 {
-        font-size: 70px;
-        line-height: 80px;
-    }
-    
-    .mainBanner h1 {
-        font-size: 30px;
-        display: block;
-        width: 600px;
-        margin: 0 auto;
-    }
-    
-    .mainLinks  {
-        overflow: hidden;
-        padding-bottom: 20px;
-    }
-    
-    .mainLinks div {
-        margin: 20px 10px 0;
-        height: 230px;
-        background-color: #f2f2f2;
-        float: left;
-    }
-        
-    .mainLinks div h3 {
-        line-height: 230px;
-        font-size: 38px;
-    }
-    
-    .rectangle {
-        width: calc(50% - 20px) !important;
-    }
-    
-    .mainAbout {
-        margin-top: 20px;
-        width: 100%;
-    }
     
     .mainAbout h1 {
         font-size: 50px;
@@ -356,9 +365,77 @@ header .issues {
     }
 }
 
+/* PORTFOLIO */
+
+.portfolioLinks div {
+    margin: 16px 16px 0;
+    width: calc(100% - 32px);
+    height: 100px;
+    background-color: #f2f2f2;
+}
+
+.portfolioLinks div h3 {
+    font-family: 'Cantarell', sans-serif;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: 50;
+    color: #111;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1000px) {
+    .portfolioLinks  {
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+    
+    .portfolioLinks div {
+        margin: 20px 10px 0;
+        width: calc(50% - 20px) !important;
+        height: 500px;
+        background-color: #f2f2f2;
+        float: left;
+    }
+    
+    .portfolioLinks div h3 {
+        line-height: 500px;
+        font-size: 40px;
+    }
+    
+    .portfolioMaze:hover {
+        background-image: url(img/Maze.PNG);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }  
+        
+    .portfolioBalancer:hover {
+        background-image: url(img/Balancer.PNG);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .portfolioBeer:hover {
+        background-image: url(img/Jug.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }  
+    
+    .portfolioApp:hover {
+        background-image: url(img/Messenger.jpeg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }  
+}
+
 /* FOOTER */
 
 footer {
+    display: block;
     width: calc(100%) - 80px;
     padding: 40px 40px;
     background-color: #838B8B;
